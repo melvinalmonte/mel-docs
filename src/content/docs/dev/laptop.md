@@ -44,6 +44,19 @@ git --version
    pbcopy < ~/.ssh/id_rsa.pub
    ```
 
+## IDE
+
+[Intellij IDEA Ultimate](https://www.jetbrains.com/idea/) is my preferred IDE for development. You can download it from [here](https://www.jetbrains.com/idea/download/#section=mac).
+
+[VSCode](https://code.visualstudio.com/) is my preferred code editor for quick edits. You can download it from [here](https://code.visualstudio.com/download).
+
+If homebrew is installed, you can install Intellij IDEA Ultimate and VSCode by running the following command in your terminal:
+
+```bash
+brew install --cask intellij-idea
+brew install --cask visual-studio-code
+```
+
 ## MacOS
 
 ### Xcode Command Line Tools
@@ -223,12 +236,59 @@ Run `:PlugInstall` to install the plugins.
 
 ## Windows
 
-TODO: Add instructions for Windows.
-
 ### Scoop
 
-TODO: Add instructions for Scoop.
+Scoop is a command-line installer for Windows inspired by Homebrew for macOS. It focuses on simplifying the installation of software and development tools without the need for elevated permissions.
+
+To install Scoop, you first need to ensure that you have PowerShell 3 (or later) and .NET Framework 4.5 (or later) installed on your Windows machine.
+
+To install Scoop, run the following command in your PowerShell:
+
+Install without proxy:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser; iwr -useb get.scoop.sh | iex
+```
+
+Install behind proxy:
+
+```powershell
+$proxy = "http://<USERNAME>:<PASSWORD>@proxy.com:<PORT>"
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser; iwr -useb get.scoop.sh -Proxy $proxy | iex
+```
+
+Verify the installation:
+
+```powershell
+scoop --version
+```
+
+You should see the following output:
+
+```bash
+Scoop x.x.x
+```
 
 ### Hyper
 
-TODO: Add instructions for Hyper.
+Hyper is a sleek and modern terminal built on web technologies. It's fully extensible and customizable, making it a great choice for developers looking for an advanced terminal experience on Windows. You can learn more about Hyper by visiting its [homepage](https://hyper.is/).
+
+#### Installation steps
+
+1. **Ensure Scoop is Installed**
+
+2. **Install Hyper**
+
+   With Scoop installed, you can now install Hyper with the following command:
+
+   ```powershell
+   scoop install hyper
+   ```
+
+3. **Launch Hyper**
+
+   After installation, you can launch Hyper by typing `hyper` into your command prompt or searching for "Hyper" in your start menu.
+
+4. **Optional Customizations**
+
+   Hyper allows for a wide range of customizations, from themes to plugins. You can modify the `.hyper.js` configuration file in your home directory to tweak the settings to your liking.
