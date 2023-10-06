@@ -93,3 +93,20 @@ Replace `[version]` with your preferred version number, e.g., `nvm alias default
 :::caution
 The `nvm alias default` command is not available in the Windows environment.
 :::
+
+### Setting up npm proxy
+
+To set up npm proxy globally, run the following commands:
+
+```bash
+npm config set proxy http://proxy.company.com:8080
+npm config set https-proxy http://proxy.company.com:8080
+```
+
+Optionally, you can set up a proxy in your project by creating a `.npmrc` file at your project root and adding the following:
+
+```editorconfig
+registry=http://your.internal.registry.org/
+sass_binary_site=https://your.internal.binary.sass.site/
+strict-ssl=false
+```
