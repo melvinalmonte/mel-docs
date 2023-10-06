@@ -8,7 +8,10 @@ export default defineConfig({
     starlight({
       title: "MelDocs",
       social: {
-        github: "https://github.com/melvinalmonte",
+        github: "https://github.com/melvinalmonte/mel-docs",
+      },
+      editLink: {
+        baseUrl: "https://github.com/melvinalmonte/mel-docs/tree/main/",
       },
       sidebar: [
         {
