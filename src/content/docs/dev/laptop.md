@@ -1,10 +1,12 @@
 ---
 title: Laptop
 description: How to setup your local machine for development.
---- 
+---
+
 This guide will help you(me) setup your local machine for development.
 
 ## Git
+
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 Make sure to have the latest version of Git installed on your machine. You can download it from [here](https://git-scm.com/downloads).
 
@@ -13,83 +15,104 @@ Once downloaded and installed, you can check the version of Git by running the f
 ```bash
 git --version
 ```
+
 ### Setting up Git
 
 1. Set your name and email address:
-	```bash
-	git config --global user.name "Mick Mouse"
-	git config --global user.email "mickmouse@foo.bar"
-	```
-	Verify your settings:
-	```bash
-	git config user.name
-	git config user.email
-	```
+
+   ```bash
+   git config --global user.name "Mick Mouse"
+   git config --global user.email "mickmouse@foo.bar"
+   ```
+
+   Verify your settings:
+
+   ```bash
+   git config user.name
+   git config user.email
+   ```
 
 2. Create a new SSH key:
-	```bash
-	ssh-keygen -t rsa"
-	```
+
+   ```bash
+   ssh-keygen -t rsa"
+   ```
+
 3. Add the SSH key to your clipboard and paste it in your GitHub account:
-	```bash
-	pbcopy < ~/.ssh/id_rsa.pub
-	```
+
+   ```bash
+   pbcopy < ~/.ssh/id_rsa.pub
+   ```
 
 ## MacOS
 
 ### Xcode Command Line Tools
+
 Xcode Command Line Tools includes a GCC compiler, linker, and other utilities. Many useful tools are included in the Xcode Command Line Tools, such as Git, which are not included in the macOS by default.
 
 To install the Xcode Command Line Tools, run the following command in your terminal:
+
 ```bash
 xcode-select --install
 ```
+
 verify the installation:
+
 ```bash
 xcode-select -p
 ```
+
 You should see the following output:
+
 ```bash
 /Library/Developer/CommandLineTools
 ```
+
 ### Homebrew
-	
+
 Homebrew is a free and open-source software package management system that simplifies the installation of software on Apple's macOS.
-	
 Installing Homebrew will also install the Xcode Command Line Tools. So, you can skip the first step if you haven't installed the Xcode Command Line Tools.
-	
 To install Homebrew run the following command in your terminal:
-	
 Install without proxy:
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 Install behind proxy:
+
 ```bash
 /bin/bash -c "$(curl -vvv -x http://<USERNAME>:<PASSWORD>@proxy.com:<PORT> -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 Verify the installation:
+
 ```bash
 brew --version
 ```
+
 You should see the following output:
+
 ```bash
 Homebrew x.x.x
 ```
 
 ### Kitty
+
 Kitty is a fast, featureful, GPU based terminal emulator. It offloads rendering to the GPU and uses OpenGL for fast, cross-platform performance on modern hardware.
 
 To install Kitty run the following command in your terminal:
+
 ```bash
 brew install --cask kitty
 ```
+
 #### Preferred Theme
+
 [Rasmus]("https://github.com/kvrohit/rasmus.nvim/blob/main/extras/kitty/rasmus.conf") theme for Kitty.
 
 Go to `~/.config/kitty` and create a file named `current-theme.conf` and paste the following content in it:
+
 ```bash
 # Rasmus colorscheme for kitty
 cursor #b6b6b5
@@ -123,25 +146,32 @@ active_border_color   #3a3a39
 inactive_border_color #323231
 inactive_text_alpha   0.8
 ```
+
 ### Auto-Suggestions
+
 For auto-suggestions in the terminal my preferred choice is [zsh-autosuggestions]("https://github.com/zsh-users/zsh-autosuggestions").
 
 To install zsh-autosuggestions run the following command in your terminal:
+
 ```bash
 brew install zsh-autosuggestions
 ```
+
 To activate the autosuggestions, add the following at the end of your `.zshrc`:
+
 ```bash
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
+
 You will also need to restart your terminal for this change to take effect.
 
-
 ### VIM
+
 Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems.
 I prefer to keep things simple and use the default vim that comes with MacOS with some minor tweaks.
 
 Add the following to your `.vimrc` file:
+
 ```vim
 syntax on
 
@@ -180,7 +210,7 @@ call plug#begin()
 call plug#end()
 
 set termguicolors
-let ayucolor="dark" 
+let ayucolor="dark"
 colorscheme ayu
 
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -193,7 +223,12 @@ Run `:PlugInstall` to install the plugins.
 
 ## Windows
 
+TODO: Add instructions for Windows.
+
 ### Scoop
+
+TODO: Add instructions for Scoop.
 
 ### Hyper
 
+TODO: Add instructions for Hyper.
