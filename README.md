@@ -1,21 +1,12 @@
-# Starlight Starter Kit: Tailwind
+# Mel-docs
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Keeping track of my dev setup and other things I've used.
 
-```
-npm create astro@latest -- --template starlight/tailwind
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/tailwind)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/tailwind)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
+## Project Structure
 
 Inside of your Astro + Starlight project, you'll see the following folders and files:
 
-```
+``` text
 .
 ├── public/
 ├── src/
