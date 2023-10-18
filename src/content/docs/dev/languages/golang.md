@@ -56,7 +56,7 @@ Setting up a Golang environment is easy and can be done in a matter of minutes. 
    The `extras` bucket contains the Go app manifest and other useful software:
 
    ```powershell
-   coop bucket add extras
+   scoop bucket add extras
    ```
 
 3. **Install Go**
