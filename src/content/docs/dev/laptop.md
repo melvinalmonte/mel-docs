@@ -234,6 +234,20 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 Run `:PlugInstall` to install the plugins.
 
+### Alfred
+
+**Alfred** is a powerful productivity tool for macOS, designed to boost your efficiency with hotkeys, keywords, and file actions. With its unique workflows, Alfred offers a seamless way to search for files online and on your Mac, browse your file system, and much more.
+
+To install Alfred run the following command in your terminal (provided that homebrew is installed):
+
+```bash
+brew install --cask alfred
+```
+Follow the prompts to provided in the alfred installer to complete the installation.
+
+<hr/>
+
+
 ## Windows
 
 ### Scoop
