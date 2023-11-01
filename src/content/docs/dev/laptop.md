@@ -162,7 +162,7 @@ inactive_text_alpha   0.8
 
 ### Auto-Suggestions
 
-For auto-suggestions in the terminal my preferred choice is [zsh-autosuggestions]("https://github.com/zsh-users/zsh-autosuggestions").
+For auto-suggestions in the terminal my preferred choice is [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions).
 
 To install zsh-autosuggestions run the following command in your terminal:
 
