@@ -7,7 +7,7 @@ This guide will help you(me) setup your local machine for development.
 
 ## Git
 
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+**Git** is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 Make sure to have the latest version of Git installed on your machine. You can download it from [here](https://git-scm.com/downloads).
 
 Once downloaded and installed, you can check the version of Git by running the following command in your terminal:
@@ -61,7 +61,7 @@ brew install --cask visual-studio-code
 
 ### Xcode Command Line Tools
 
-Xcode Command Line Tools includes a GCC compiler, linker, and other utilities. Many useful tools are included in the Xcode Command Line Tools, such as Git, which are not included in the macOS by default.
+**Xcode Command Line Tools** includes a GCC compiler, linker, and other utilities. Many useful tools are included in the Xcode Command Line Tools, such as Git, which are not included in the macOS by default.
 
 To install the Xcode Command Line Tools, run the following command in your terminal:
 
@@ -83,7 +83,7 @@ You should see the following output:
 
 ### Homebrew
 
-Homebrew is a free and open-source software package management system that simplifies the installation of software on Apple's macOS.
+**Homebrew** is a free and open-source software package management system that simplifies the installation of software on Apple's macOS.
 Installing Homebrew will also install the Xcode Command Line Tools. So, you can skip the first step if you haven't installed the Xcode Command Line Tools.
 To install Homebrew run the following command in your terminal:
 Install without proxy:
@@ -112,7 +112,7 @@ Homebrew x.x.x
 
 ### Kitty
 
-Kitty is a fast, featureful, GPU based terminal emulator. It offloads rendering to the GPU and uses OpenGL for fast, cross-platform performance on modern hardware.
+**Kitty** is a fast, featureful, GPU based terminal emulator. It offloads rendering to the GPU and uses OpenGL for fast, cross-platform performance on modern hardware.
 
 To install Kitty run the following command in your terminal:
 
@@ -180,7 +180,7 @@ You will also need to restart your terminal for this change to take effect.
 
 ### VIM
 
-Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems.
+**Vim** is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems.
 I prefer to keep things simple and use the default vim that comes with MacOS with some minor tweaks.
 
 Add the following to your `.vimrc` file:
@@ -245,8 +245,16 @@ brew install --cask alfred
 ```
 Follow the prompts to provided in the alfred installer to complete the installation.
 
-<hr/>
+### Clipy
 
+**Clipy** is a clipboard extension app for macOS. It extends the native clipboard functionality by remembering every item you copy, allowing you to quickly access any of those items at a later time. With its snippets feature, you can also save frequently used phrases and access them with ease.
+
+To install Clipy run the following command in your terminal (provided that homebrew is installed):
+
+```bash
+brew install --cask clipy
+```
+---
 
 ## Windows
 
