@@ -234,6 +234,14 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 Run `:PlugInstall` to install the plugins.
 
+:::note
+`:PlugInstall` requires `vim-plug` to be installed, to install it run the following command in your terminal:
+```shell
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+:::
+
 ### Alfred
 
 **Alfred** is a powerful productivity tool for macOS, designed to boost your efficiency with hotkeys, keywords, and file actions. With its unique workflows, Alfred offers a seamless way to search for files online and on your Mac, browse your file system, and much more.
