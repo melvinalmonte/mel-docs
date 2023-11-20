@@ -35,7 +35,7 @@ git --version
 2. Create a new SSH key:
 
    ```bash
-   ssh-keygen -t rsa"
+   ssh-keygen -t rsa
    ```
 
 3. Add the SSH key to your clipboard and paste it in your GitHub account:
