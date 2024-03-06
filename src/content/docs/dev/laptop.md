@@ -262,6 +262,36 @@ To install Clipy run the following command in your terminal (provided that homeb
 ```bash
 brew install --cask clipy
 ```
+
+### Arc
+
+**Arc** is a web browser that stands out for its integration of web browsing with built-in applications and features, enhancing user interaction with the internet.
+
+To install Arc using `homebrew`
+
+```bash
+brew install --cask arc
+```
+
+### Starship
+
+**Starship** is a Rust based customizable cross-shell prompt. Brings the best-in-class speed and safety of Rust, to make your prompt as quick and reliable as possible.
+
+To install starship using `homebrew`
+
+```bash
+brew install starship
+```
+
+### Zed 
+
+**Zed** is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. Zed combines the power of an IDE with the responsiveness of a lightweight editor. 
+
+To install Zed using `homebrew`
+
+```bash
+brew install zed
+```
 ---
 
 ## Windows
