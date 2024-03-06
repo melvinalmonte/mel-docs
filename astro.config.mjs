@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "MelDocs",
+      title: "Dev Docs",
       social: {
         github: "https://github.com/melvinalmonte/mel-docs",
       },
