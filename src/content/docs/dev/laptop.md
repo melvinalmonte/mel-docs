@@ -342,7 +342,7 @@ In `~/.config/zed/settings.json` add:
 
 ---
 
-## (Work In Progress...)
+## Work In Progress...
 
 ### Windows
 
