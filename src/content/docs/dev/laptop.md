@@ -1,56 +1,89 @@
 ---
-title: Laptop
-description: How to setup your local machine for development.
+title: Laptop Setup Guide
+description: Instructions for setting up your local machine for development.
 ---
 
-This guide will help you(me) setup your local machine for development.
+This guide walks through the setup process for your local development environment.
 
-## Git
+## Initial Setup
 
-**Git** is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-Make sure to have the latest version of Git installed on your machine. You can download it from [here](https://git-scm.com/downloads).
+### Git
 
-Once downloaded and installed, you can check the version of Git by running the following command in your terminal:
+**Git** is essential for version control. Ensure you have the latest version by downloading it from \[here\](https://git-scm.com/downloads).
+
+Verify the installation with:
 
 ```bash
 git --version
 ```
 
-### Setting up Git
+#### Configuring Git
 
-1. Set your name and email address:
+Set up your Git identity:
 
-   ```bash
-   git config --global user.name "Mick Mouse"
-   git config --global user.email "mickmouse@foo.bar"
-   ```
+```bash
+git config --global user.name "<your_username>"
+git config --global user.email "username@email.com"
+```
 
-   Verify your settings:
+Check your settings:
 
-   ```bash
-   git config user.name
-   git config user.email
-   ```
+```bash
+git config user.name
+git config user.email
+```
 
-2. Create a new SSH key:
+#### SSH Key for GitHub
 
-   ```bash
-   ssh-keygen -t rsa
-   ```
+Generate a new SSH key
 
-3. Add the SSH key to your clipboard and paste it in your GitHub account:
+```bash
+ssh-keygen -t rsa
+```
 
-   ```bash
-   pbcopy < ~/.ssh/id_rsa.pub
-   ```
+Add the SSH key to your clipboard and add it in your GitHub account:
+
+```bash
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+### Homebrew
+
+**Homebrew** is a free and open-source software package management system that simplifies the installation of software on Apple's macOS.
+
+To install Homebrew run the following command in your terminal:
+
+Homebrew installation:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Homebrew installation behind proxy:
+
+```bash
+/bin/bash -c "$(curl -vvv -x http://<USERNAME>:<PASSWORD>@proxy.com:<PORT> -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Verify the installation:
+
+```bash
+brew --version
+```
+
+You should see the following output:
+
+```bash
+Homebrew x.x.x
+```
 
 ## IDE
 
 [Intellij IDEA Ultimate](https://www.jetbrains.com/idea/) is my preferred IDE for development. You can download it from [here](https://www.jetbrains.com/idea/download/#section=mac).
 
-[VSCode](https://code.visualstudio.com/) is my preferred code editor for quick edits. You can download it from [here](https://code.visualstudio.com/download).
+[VSCode](https://code.visualstudio.com/) is my preferred code editor for quick edits (For now...Quickly being replaced by [Zed](https://zed.dev/)). You can download VSCode from [here](https://code.visualstudio.com/download).
 
-If homebrew is installed, you can install Intellij IDEA Ultimate and VSCode by running the following command in your terminal:
+Alternatively, use Homebrew to install them on macOS (Preferred):
 
 ```bash
 brew install --cask intellij-idea
@@ -60,6 +93,10 @@ brew install --cask visual-studio-code
 ## MacOS
 
 ### Xcode Command Line Tools
+
+:::note
+This is an optional step, Homebrew will install the latest version of Xcode Command Line Tools during initial installation.
+:::
 
 **Xcode Command Line Tools** includes a GCC compiler, linker, and other utilities. Many useful tools are included in the Xcode Command Line Tools, such as Git, which are not included in the macOS by default.
 
@@ -79,35 +116,6 @@ You should see the following output:
 
 ```bash
 /Library/Developer/CommandLineTools
-```
-
-### Homebrew
-
-**Homebrew** is a free and open-source software package management system that simplifies the installation of software on Apple's macOS.
-Installing Homebrew will also install the Xcode Command Line Tools. So, you can skip the first step if you haven't installed the Xcode Command Line Tools.
-To install Homebrew run the following command in your terminal:
-Install without proxy:
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-Install behind proxy:
-
-```bash
-/bin/bash -c "$(curl -vvv -x http://<USERNAME>:<PASSWORD>@proxy.com:<PORT> -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-Verify the installation:
-
-```bash
-brew --version
-```
-
-You should see the following output:
-
-```bash
-Homebrew x.x.x
 ```
 
 ### Kitty
@@ -236,10 +244,12 @@ Run `:PlugInstall` to install the plugins.
 
 :::note
 `:PlugInstall` requires `vim-plug` to be installed, to install it run the following command in your terminal:
+
 ```shell
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
 :::
 
 ### Alfred
@@ -251,6 +261,7 @@ To install Alfred run the following command in your terminal (provided that home
 ```bash
 brew install --cask alfred
 ```
+
 Follow the prompts to provided in the alfred installer to complete the installation.
 
 ### Clipy
@@ -283,20 +294,59 @@ To install starship using `homebrew`
 brew install starship
 ```
 
-### Zed 
+#### Preferred Starship Config
 
-**Zed** is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. Zed combines the power of an IDE with the responsiveness of a lightweight editor. 
+In `~/.config/starship.toml` add:
+
+```bash
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[✗](bold red) '
+
+[package]
+disabled = true
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = 'bold blue'
+symbol = '🅰 '
+```
+
+### Zed
+
+**Zed** is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. Zed combines the power of an IDE with the responsiveness of a lightweight editor.
 
 To install Zed using `homebrew`
 
 ```bash
 brew install zed
 ```
+
+#### Preferred Zed Config
+
+In `~/.config/zed/settings.json` add:
+
+```bash
+{
+  "theme": "Ayu Dark",
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "format_on_save": "language_server",
+  "autosave": "on_focus_change"
+}
+```
+
 ---
 
-## Windows
+## (Work In Progress...)
 
-### Scoop
+### Windows
+
+#### Scoop
 
 Scoop is a command-line installer for Windows inspired by Homebrew for macOS. It focuses on simplifying the installation of software and development tools without the need for elevated permissions.
 
@@ -329,7 +379,7 @@ You should see the following output:
 Scoop x.x.x
 ```
 
-### Hyper
+#### Hyper
 
 Hyper is a sleek and modern terminal built on web technologies. It's fully extensible and customizable, making it a great choice for developers looking for an advanced terminal experience on Windows. You can learn more about Hyper by visiting its [homepage](https://hyper.is/).
 
