@@ -9,7 +9,7 @@ This guide walks through the setup process for your local development environmen
 
 ### Git
 
-**Git** is essential for version control. Ensure you have the latest version by downloading it from \[here\](https://git-scm.com/downloads).
+**Git** is essential for version control. Ensure you have the latest version by downloading it from [here](https://git-scm.com/downloads).
 
 Verify the installation with:
 
@@ -79,16 +79,18 @@ Homebrew x.x.x
 
 ## IDE
 
-[Intellij IDEA Ultimate](https://www.jetbrains.com/idea/) is my preferred IDE for development. You can download it from [here](https://www.jetbrains.com/idea/download/#section=mac).
+[Intellij IDEA Ultimate](https://www.jetbrains.com/idea/) is my preferred IDE for development.
 
-[VSCode](https://code.visualstudio.com/) is my preferred code editor for quick edits (For now...Quickly being replaced by [Zed](https://zed.dev/)). You can download VSCode from [here](https://code.visualstudio.com/download).
+[VSCode](https://code.visualstudio.com/) is my preferred code editor for quick edits (For now...Quickly being replaced by [Zed](https://zed.dev/)).
 
-Alternatively, use Homebrew to install them on macOS (Preferred):
+Installation using Homebrew:
 
 ```bash
 brew install --cask intellij-idea
 brew install --cask visual-studio-code
 ```
+
+Alternatively, you can use their respecive download links found [here](https://www.jetbrains.com/idea/download/#section=mac) for Intellij and [here](https://code.visualstudio.com/download) for VSCode.
 
 ## MacOS
 
