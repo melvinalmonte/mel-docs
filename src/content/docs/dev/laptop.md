@@ -296,6 +296,20 @@ To install starship using `homebrew`
 brew install starship
 ```
 
+After starship is installed, add the following to your `.zshrc` file:
+
+```bash
+eval "$(starship init zsh)"
+```
+
+To install the necessary nerd fonts using homebrew run the following command in your terminal:
+
+```bash
+brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs brew install --cask
+```
+
+After installing the necessary fonts set them on your preferred terminal emulator.
+
 #### Preferred Starship Config
 
 In `~/.config/starship.toml` add:
