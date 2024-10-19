@@ -25,6 +25,6 @@ export default defineConfig({
   ],
   redirects: {
     "/": "/dev/laptop/setup",
-    "/dev/laptop": "dev/laptop/setup",
+    "/dev/laptop": "/dev/laptop/setup",
   },
 });
