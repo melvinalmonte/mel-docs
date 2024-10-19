@@ -24,6 +24,6 @@ export default defineConfig({
     tailwind({ applyBaseStyles: false }),
   ],
   redirects:{
-    "/": "/dev/laptop"
+    "/": "/dev/laptop/setup"
   }
 });

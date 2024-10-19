@@ -1,5 +1,5 @@
 ---
-title: Laptop Setup Guide
+title: Setup Guide
 description: Instructions for setting up your local machine for development.
 ---
 
