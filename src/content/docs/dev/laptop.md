@@ -310,6 +310,10 @@ brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs brew install --ca
 
 After installing the necessary fonts set them on your preferred terminal emulator.
 
+:::note
+My preferred font for this starship configuration is `FiraCode Nerd Font Mono`
+:::
+
 #### Preferred Starship Config
 
 In `~/.config/starship.toml` add:
