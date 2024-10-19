@@ -23,7 +23,8 @@ export default defineConfig({
     }),
     tailwind({ applyBaseStyles: false }),
   ],
-  redirects:{
-    "/": "/dev/laptop/setup"
-  }
+  redirects: {
+    "/": "/dev/laptop/setup",
+    "/dev/laptop": "dev/laptop/setup",
+  },
 });
