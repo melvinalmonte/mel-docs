@@ -171,7 +171,8 @@ inactive_text_alpha   0.8
 ```
 
 :::note
-Add `[[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"` to the `.zshrc` to fix kitty's [SSH woes](https://www.reddit.com/r/KittyTerminal/comments/13ephdh/xtermkitty_ssh_woes_i_know_about_the_kitten_but/).:::
+Add `[[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"` to the `.zshrc` to fix kitty's [SSH woes](https://www.reddit.com/r/KittyTerminal/comments/13ephdh/xtermkitty_ssh_woes_i_know_about_the_kitten_but/).
+:::
 
 
 ### Auto-Suggestions
