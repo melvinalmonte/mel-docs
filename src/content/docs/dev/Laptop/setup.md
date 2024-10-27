@@ -170,6 +170,10 @@ inactive_border_color #323231
 inactive_text_alpha   0.8
 ```
 
+:::note
+Add `[[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"` to the `.zshrc` to fix kitty's [SSH woes](https://www.reddit.com/r/KittyTerminal/comments/13ephdh/xtermkitty_ssh_woes_i_know_about_the_kitten_but/).:::
+
+
 ### Auto-Suggestions
 
 For auto-suggestions in the terminal my preferred choice is [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions).
@@ -245,7 +249,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 Run `:PlugInstall` to install the plugins.
 
 :::note
-`:PlugInstall` requires `vim-plug` to be installed, to install it run the following command in your terminal:
+`:PlugInstall` requires `vim-plug` to be installed, to install it run the following command in your terminal:::
 
 ```shell
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
