@@ -77,6 +77,64 @@ You should see the following output:
 Homebrew x.x.x
 ```
 
+### Using Brewfile
+
+We can bulk install all the packages and apps that we need for our development environment using a brewfile.
+
+Current Brewfile:
+
+```bash
+# Brewfile
+
+# 'brew tap'
+tap "homebrew/cask"
+
+# 'brew install'
+brew "starship"
+brew "nvm"
+brew "uv"
+brew "go"
+brew "pyenv"
+brew "httpie"
+brew "lazydocker"
+brew "lazygit"
+brew "zsh-autosuggestions"
+brew "bat"
+
+# 'brew install --cask'
+cask "jetbrains-toolbox"
+cask "cursor"
+cask "kitty"
+cask "alfred"
+cask "clipy"
+cask "firefox@developer-edition"
+cask "claude"
+cask "docker"
+cask "mullvadvpn"
+cask "spotify"
+cask "zed"
+cask "ghostty"
+cask "slack"
+cask "whatsapp"
+cask "zed"
+
+```
+
+Run the following command to install all the packages in the Brewfile:
+
+```bash
+brew bundle --file=~/Brewfile
+```
+
+Alternatively, you can use the following command to install all the packages in the Brewfile if you have a Brewfile in the current directory:
+
+```bash
+brew bundle
+```
+
+
+
+
 ## IDE
 
 [Intellij IDEA Ultimate](https://www.jetbrains.com/idea/) is my preferred IDE for development.
